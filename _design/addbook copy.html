@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vocab-practice</title>
+
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../finalStyle.css">
+    <link rel="stylesheet" href="../assets/vendor/ionicons/css/ionicons.min.css">
+</head>
+
+<body>
+    <div class="background-appearence">
+        <div class="app">
+            <div class="container-fluid main booklist-container" data-name="book-list">
+                <div class="row">
+                    <div name="side-nevigation" class="col-3 p-3" id="left-sidebar">
+                        <h6 class="mb-3 p-2 book-name">Vocab Manage Nevigation</h6>
+
+                        <ol class="ml-4 mb-0 list-unstyled accordian chapter-holder">
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle active-acc-toggle">
+                                    <i class="ion-ios-folder"></i>
+                                    <span>VocabCollections</span>
+                                </li>
+                                <ul class="acc-body active-acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item active-acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle">
+                                    <i class="ion-ios-bookmarks-outline"></i>
+                                    <span>Chapter</span>
+                                </li>
+                                <ul class="acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle">
+                                    <i class="ion-ios-list-outline"></i>
+                                    <span>Section</span>
+                                </li>
+                                <ul class="acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle">
+                                    <i class="ion-ios-keypad"></i>
+                                    <span>Vocab</span>
+                                </li>
+                                <ul class="acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+                        </ol>
+                    </div>
+                    <!-- col-3 end -->
+                    <div class="px-5 pt-4 pb-2 col-9 book-action-pannel" id="content-pannel">
+                        <div class="row justify-content-center">
+                            <section class="col-12 p-0 pannel-appearence">
+                                <header class="leading title  px-4 py-3">
+                                    <span>Add new book for your vocabulary</span>
+                                </header>
+                                <!-- header end -->
+                                <div class="pannel-body">
+                                    <div class="form-group row mb-4">
+                                        <label for="" class="form-input-label text-right col-sm-2 control-label">Book
+                                            Name</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control is-invalid" placeholder="Book name"
+                                                id="book-name">
+                                        </div>
+                                        <span class=" col-12 general-error show"> A name is required</span>
+                                    </div>
+                                    <!-- .form-group end -->
+                                    <div class="form-group row mb-4">
+                                        <label for="" class="form-input-label text-right col-sm-2">Author Name</label>
+
+                                        <div class="col-sm-10">
+                                            <input type="text" class="form-control" placeholder="Author name"
+                                                id="author-name">
+                                        </div>
+                                        <span class=" col-12 general-error show"> A name is required</span>
+                                    </div>
+                                    <!-- .form-group end -->
+                                    <div class="form-group row">
+                                        <label for="" class="form-input-label text-right col-sm-2">Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea class="form-control" name="description" id="description"
+                                                placeholder="Description name" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- .form-group end -->
+                                    <div class="form-group text-center mx-auto">
+                                        <button class="btn offset-2  btn-success w-50 mt-2">
+                                            Save
+                                            <i class="ion-android-create"></i>
+                                        </button>
+                                    </div>
+                                    <!-- .form-group end -->
+
+                                </div>
+                                <!-- .pannel-body end -->
+                            </section>
+                            <!-- .pannel-appearence end -->
+                        </div>
+                        <!-- .row end -->
+                    </div>
+                    <!-- #content-pannel end -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- .main end -->
+        </div>
+        <!-- .app end -->
+    </div>
+    <!-- .background-appearence end -->
+
+    <script src="../scripts/script.js"></script>
+
+</body>
+
+</html>

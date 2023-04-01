@@ -1,0 +1,1 @@
+let VocabState = new MainState();

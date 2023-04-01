@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vocab-practice</title>
+
+        <link rel="stylesheet" href="../assets/styles/style.css">
+        <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="../finalStyle.css">
+        <link rel="stylesheet" href="../assets/vendor/ionicons/css/ionicons.min.css">
+    </head>
+
+    <body>
+        <div class="background-appearence">
+            <div class="app">
+                <div class="container-fluid main practice-container" data-name="practice-v">
+                    <div class="row">
+                        <div name="side-nevigation" class="col-3 p-3" id="left-sidebar">
+                            <h6 class="mb-3 p-2 book-name">Book Name</h6>
+
+                            <ol class="ml-4 mb-0 list-unstyled accordian chapter-holder">
+                                <!-- <li class="chapter">
+                                chapter 1
+                            </li>
+                            <ul class="section-holder">
+                                <li class="seciton">section 1</li>
+                                <li class="seciton">section 2</li>
+                                <li class="seciton">section 3</li>
+                                <li class="seciton">section 4</li>
+                                <li class="seciton">section 5</li>
+                            </ul> -->
+                                <div class="accordian-dropdown">
+                                    <li class="acc-toggle active-acc-toggle">
+                                        <span>Chapters</span>
+                                    </li>
+                                    <ul class="acc-body active-acc-body">
+                                        <li class="acc-item">
+                                            <span>section 1</span>
+                                        </li>
+
+                                        <li class="acc-item active-acc-item">
+                                            <span>section 2</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <span>section 3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end accoredian dropdown -->
+                            </ol>
+                        </div>
+                        <!-- #left-sidbar end -->
+
+                        <div class="px-5 pt-4 pb-2 col-9 practice-pannel" id="content-pannel">
+                            <section class="pracice-wraper">
+                                <div class="section-info px-4 py-2 mb-4">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="section-description">
+                                                <h5 class="section-name m-0">The section name will appear here</h5>
+                                                <h6 class="section-eng-name m-0">English version of section name will
+                                                    appear
+                                                    here.</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="practice-result d-flex justify-content-around">
+                                                <div class="text-center correct-eval">
+                                                    <p class="m-0 notation-heading">correct</p>
+                                                    <p class="m-0 notation-number">0</p>
+                                                </div>
+                                                <div class="text-center wrong-eval">
+                                                    <p class="m-0 notation-heading">wrong</p>
+                                                    <p class="m-0 notation-number">0</p>
+                                                </div>
+                                                <div class="text-center na-eval">
+                                                    <p class="m-0 notation-heading">Not Attempt</p>
+                                                    <p class="m-0 notation-number">0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- .section-info end -->
+                                <div class="evaluation-pain">
+                                    <div class="row mb-1">
+                                        <div class="col-9 pb-1">
+
+                                            <header class=" py-1 mx-0 row text-center">
+                                                <div class="col-4">
+                                                    <h6>Meaning</h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <h6>Vocab</h6>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button class="show-vocab-btn">Show</button>
+                                                </div>
+                                            </header>
+                                            <!-- heade end -->
+
+                                            <div class="vocabs py-1">
+                                                <div class="row vocab-record py-1">
+                                                    <div class="col-6">
+                                                        <span>
+                                                            The Meaning
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="col-6 text-right">
+                                                        <input class="input-type" type="text" name="vocabId" id="1">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- .vocabs end -->
+
+                                        </div>
+                                        <!-- .col-5 end -->
+                                    </div>
+                                    <!-- .row end -->
+                                </div>
+                                <!-- .evaluation-pain end -->
+                            </section>
+                            <!-- .practice-wraper end -->
+                            <section class=" col-9 evaluation-pain-control">
+                                <div class="row text-center">
+                                    <div class="col-6"><button class="check">Check (ctr + enter)</button></div>
+                                    <div class="col-6"><button class="reset">Reset (ctrl + alt + r)</button></div>
+                                </div>
+                            </section>
+                            <!-- .evaluation-pain-control end -->
+                        </div>
+                        <!-- .col-9 #content-pannel end -->
+                    </div>
+                    <!-- .row end -->
+                </div>
+                <!-- .container-fluid end -->
+            </div>
+            <!-- .app end -->
+        </div>
+        <!-- .background-appearence end -->
+
+        <script src="../scripts/script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vocab-practice</title>
+
+        <link rel="stylesheet" href="../assets/styles/style.css">
+        <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="finalStyle.css">
+        <link rel="stylesheet" href="../assets/vendor/ionicons/css/ionicons.min.css">
+    </head>
+
+    <body>
+        <div class="background-appearence">
+            <div class="app">
+                <div class="container-fluid main booklist-container" data-name="book-list">
+
+                    <div class="row">
+                        <div name="side-nevigation" class="col-3 p-3" id="left-sidebar">
+                            <h6 class="mb-3 p-2 book-name">Vocab Manage Nevigation</h6>
+
+                            <ol class="ml-4 mb-0 list-unstyled accordian chapter-holder">
+                                <div class="accordian-dropdown">
+                                    <li class="acc-toggle active-acc-toggle">
+                                        <i class="ion-ios-folder"></i>
+                                        <span>VocabCollections</span>
+                                    </li>
+                                    <ul class="acc-body active-acc-body">
+                                        <li class="acc-item">
+                                            <i class="ion-social-buffer-outline"></i>
+                                            <span>All books</span>
+                                        </li>
+
+                                        <li class="acc-item active-acc-item">
+                                            <i class="ion-plus-round"></i>
+                                            <span>Add Book</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-paintbrush"></i>
+                                            <span>Edit Book</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end accoredian dropdown -->
+
+                                <div class="accordian-dropdown">
+                                    <li class="acc-toggle">
+                                        <i class="ion-ios-bookmarks-outline"></i>
+                                        <span>Chapter</span>
+                                    </li>
+                                    <ul class="acc-body">
+                                        <li class="acc-item">
+                                            <i class="ion-social-buffer-outline"></i>
+                                            <span>All books</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-plus-round"></i>
+                                            <span>Add Book</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-paintbrush"></i>
+                                            <span>Edit Book</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end accoredian dropdown -->
+
+                                <div class="accordian-dropdown">
+                                    <li class="acc-toggle">
+                                        <i class="ion-ios-list-outline"></i>
+                                        <span>Section</span>
+                                    </li>
+                                    <ul class="acc-body">
+                                        <li class="acc-item">
+                                            <i class="ion-social-buffer-outline"></i>
+                                            <span>All books</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-plus-round"></i>
+                                            <span>Add Book</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-paintbrush"></i>
+                                            <span>Edit Book</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end accoredian dropdown -->
+
+                                <div class="accordian-dropdown">
+                                    <li class="acc-toggle">
+                                        <i class="ion-ios-keypad"></i>
+                                        <span>Vocab</span>
+                                    </li>
+                                    <ul class="acc-body">
+                                        <li class="acc-item">
+                                            <i class="ion-social-buffer-outline"></i>
+                                            <span>All books</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-plus-round"></i>
+                                            <span>Add Book</span>
+                                        </li>
+
+                                        <li class="acc-item">
+                                            <i class="ion-paintbrush"></i>
+                                            <span>Edit Book</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end accoredian dropdown -->
+                            </ol>
+                        </div>
+                        <!-- col-3 end -->
+                        <div class="px-5 pt-4 pb-2 col-9 chapter-pannel" id="content-pannel">
+                            <div class="row justify-content-center">
+                                <section class="col-12 p-0  pannel-appearence">
+                                    <header class="leading title pl-4 px-3 pt-2">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="m-0">
+                                                    <i class="loding-animation"></i>
+
+                                                    <i class="test-animate ion-ios-nutrition"></i>
+                                                    <span class="chapter-indicator">Add chapters for</span>
+                                                </p>
+                                                <p class="m-0">
+                                                    <span class=" status-heading book-indicator d-inline" title="book">
+                                                        <i class="ion-ios-book-outline"></i>
+                                                        <span class="sr-only">Book</span>
+                                                        <span class="book-name">one</span>
+                                                    </span>
+                                                    <!-- end of book span -->
+                                                </p>
+                                            </div>
+                                            <!-- end of col -->
+                                            <div class="col  text-right d-flex justify-content-end align-items-center">
+                                                <div class="form-group search-chapter-group form-inline m-0 mr-1">
+                                                    <label for="search-chapter" class="sr-only">search</label>
+                                                    <input type="text" class=" form-control form-control-sm"
+                                                        id="search-chapter" placeholder="search..">
+                                                </div>
+                                                <!-- search form gropu end -->
+                                                <div class="nice-icon search-chapter-icon mr-3" title="search sections">
+                                                    <i class="ion-ios-search-strong"></i>
+                                                </div>
+                                                <div class="nice-icon change-book-icon mr-3" title="book">
+                                                    <i class="ion-ios-book-outline"></i>
+                                                </div>
+                                            </div>
+                                            <!-- end of col -->
+                                        </div>
+                                        <!-- end of row -->
+                                    </header>
+                                    <!-- end of header -->
+                                    <div class="pannel-body no-data">
+                                        <div class="row text-center my-3">
+                                            <div class="col my-5 py-5">
+                                                <img src="../assets/img/undraw_no_data_qbuo.svg" alt="" srcset=""
+                                                    class="img-fluid">
+                                                <p class="mt-1">
+                                                    <span class="main-message">
+                                                        No Chapters are found!
+                                                    </span>
+                                                    <span class="sub-message">
+                                                        <button class="btn px-4 mt-2">
+                                                            <span>Add Chapter</span>
+                                                            <i class="ion-plus-round"></i>
+                                                        </button>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <!-- end of .col -->
+                                        </div>
+                                        <!-- end of .row -->
+                                    </div>
+                                    <!-- end of pannel-body .no-data -->
+                                </section>
+                                <!-- end of .pannnel-appearence -->
+                            </div>
+                            <!-- end of .row -->
+                        </div>
+                        <!-- end of #content-pannel -->
+                    </div>
+                    <!-- .row end -->
+                </div>
+                <!-- end of .container-fluid -->
+            </div>
+            <!-- end of .app -->
+        </div>
+        <!-- end of .backgroud-appearence -->
+
+        <script src="../scripts/script.js"></script>
+
+    </body>
+
+</html>

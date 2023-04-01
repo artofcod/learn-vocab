@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vocab-practice</title>
+    
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../finalStyle.css">
+    <link rel="stylesheet" href="../assets/vendor/ionicons/css/ionicons.min.css">
+</head>
+
+<body>
+    <div class="background-appearence">
+        <div class="app">
+            <div class="container-fluid main booklist-container" data-name="book-list">
+
+                <div class="row">
+                    <div name="side-nevigation" class="col-3 p-3" id="left-sidebar">
+                        <h6 class="mb-3 p-2 book-name">Vocab Manage Nevigation</h6>
+
+                        <ol class="ml-4 mb-0 list-unstyled accordian chapter-holder">
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle active-acc-toggle">
+                                    <i class="ion-ios-folder"></i>
+                                    <span>VocabCollections</span>
+                                </li>
+                                <ul class="acc-body active-acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item active-acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle">
+                                    <i class="ion-ios-bookmarks-outline"></i>
+                                    <span>Chapter</span>
+                                </li>
+                                <ul class="acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle">
+                                    <i class="ion-ios-list-outline"></i>
+                                    <span>Section</span>
+                                </li>
+                                <ul class="acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+
+                            <div class="accordian-dropdown">
+                                <li class="acc-toggle">
+                                    <i class="ion-ios-keypad"></i>
+                                    <span>Vocab</span>
+                                </li>
+                                <ul class="acc-body">
+                                    <li class="acc-item">
+                                        <i class="ion-social-buffer-outline"></i>
+                                        <span>All books</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-plus-round"></i>
+                                        <span>Add Book</span>
+                                    </li>
+
+                                    <li class="acc-item">
+                                        <i class="ion-paintbrush"></i>
+                                        <span>Edit Book</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end accoredian dropdown -->
+                        </ol>
+                    </div>
+                    <!-- col-3 end -->
+                    <div class="px-5 pt-4 pb-2 col-9 chapter-pannel" id="content-pannel">
+                        <div class="row justify-content-center">
+                            <section class="col-12 p-0  pannel-appearence">
+                                <header class="leading title pl-4 px-3 pt-2">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="m-0">
+                                                <span class="chapter-indicator">Add chapters for</span>
+                                            </p>
+                                            <p class="m-0">
+                                                <span class=" status-heading book-indicator d-inline" title="book">
+                                                    <i class="ion-ios-book-outline"></i>
+                                                    <span class="sr-only">Book</span>
+                                                    <span class="book-name">one</span>
+                                                </span>
+                                                <!-- end of book span -->
+                                            </p>
+                                        </div>
+                                        <!-- end of col -->
+                                        <div class="col  text-right d-flex justify-content-end align-items-center">
+                                            <div class="form-group search-chapter-group form-inline m-0 mr-1">
+                                                <label for="search-chapter" class="sr-only">search</label>
+                                                <input type="text" class=" form-control form-control-sm"
+                                                    id="search-chapter" placeholder="search..">
+                                            </div>
+                                            <!-- search form gropu end -->
+                                            <div class="nice-icon search-chapter-icon mr-3" title="search sections">
+                                                <i class="ion-ios-search-strong"></i>
+                                            </div>
+                                            <div class="nice-icon change-book-icon mr-3" title="book">
+                                                <i class="ion-ios-book-outline"></i>
+                                            </div>
+                                        </div>
+                                        <!-- end of col -->
+                                    </div>
+                                    <!-- end of row -->
+                                </header>
+                                <!-- end of header -->
+                                <div class="pannel-body">
+                                    <table class="table table-hover table-striped text-light">
+                                        <thead>
+                                            <tr>
+                                                <th>Sl.no</th>
+                                                <th>chapter name normal</th>
+                                                <th>chapter name english</th>
+                                                <th>description</th>
+                                                <th>action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="action-activated">
+                                                <td>1</td>
+                                                <!-- <td>test</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>edit/delete</td> -->
+                                                <td colspan=4>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="form-group mb-4">
+                                                                <label for="" class="form-input-label sr-only">chapter
+                                                                    name</label>
+                                                                <div class="">
+                                                                    <input type="text"
+                                                                        class="form-control form-control-sm is-invalid"
+                                                                        placeholder="Book name" id="book-name">
+                                                                </div>
+                                                                <span class=" col-12 general-error show"> A name is
+                                                                    required</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="form-group mb-4">
+                                                                <label for="" class="form-input-label sr-only">Book
+                                                                    Name</label>
+                                                                <div class="">
+                                                                    <input type="text"
+                                                                        class="form-control form-control-sm is-invalid"
+                                                                        placeholder="Book name" id="book-name">
+                                                                </div>
+                                                                <span class=" col-12 general-error show"> A name is
+                                                                    required</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <div class="form-group mb-1">
+                                                                <label for=""
+                                                                    class="form-input-label text-right sr-only">Description</label>
+                                                                <textarea class="form-control form-control-sm"
+                                                                    name="description" id="description"
+                                                                    placeholder="Description name" rows="2"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="form-group text-center mx-auto">
+                                                                <button class="btn btn-success px-4 py-1 ">
+                                                                    <span>Save Chapter</span>
+                                                                    <i class="ion-compose"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- end of tr -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>test</td>
+                                                <td>test</td>
+                                                <td>test</td>
+                                                <td>
+                                                    <div class="nice-icon edit edit-chapter mr-2">
+                                                        <i class="ion-edit"></i>
+                                                    </div>
+                                                    <div class="nice-icon delete edit-chapter">
+                                                        <i class="ion-android-delete"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- end of tr -->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>test</td>
+                                                <td>test</td>
+                                                <td>test</td>
+                                                <td>
+                                                    <div class="nice-icon edit edit-chapter mr-2">
+                                                        <i class="ion-edit"></i>
+                                                    </div>
+                                                    <div class="nice-icon delete edit-chapter">
+                                                        <i class="ion-android-delete"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- end of tr -->
+                                            <tr>
+                                                <td>4</td>
+                                                <td>test</td>
+                                                <td>test</td>
+                                                <td>test</td>
+                                                <td>
+                                                    <div class="nice-icon edit edit-chapter mr-2">
+                                                        <i class="ion-edit"></i>
+                                                    </div>
+                                                    <div class="nice-icon delete edit-chapter">
+                                                        <i class="ion-android-delete"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- end of tr -->
+                                        </tbody>
+                                        <!-- end of tbody -->
+                                    </table>
+                                    <!-- end of table -->
+                                </div>
+                                <!-- end of .pannel-body -->
+                                <div class="add-input-box text-center mx-auto">
+                                    <button class="btn px-4 mt-2">
+                                        <span>Add Another section</span>
+                                        <i class="ion-plus-round"></i>
+                                    </button>
+                                </div>
+                            </section>
+                            <!-- end of .pannnel-appearence -->
+                        </div>
+                        <!-- end of .row -->
+                    </div>
+                    <!-- end of #content-pannel -->
+                </div>
+                <!-- .row end -->
+            </div>
+            <!-- end of .container-fluid -->
+        </div>
+        <!-- end of .app -->
+    </div>
+    <!-- end of .backgroud-appearence -->
+
+    <script src="../scripts/script.js"></script>
+
+</body>
+
+</html>

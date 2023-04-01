@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vocab-practice</title>
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/vendor/ionicons/css/ionicons.min.css">
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: "Ionicons";
+            src: url("../assets/vendor/ionicons/fonts/ionicons.eot?v=2.0.0");
+            src: url("../assets/vendor/ionicons/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),
+                url("../assets/vendor/ionicons/fonts/ionicons.ttf?v=2.0.0") format("truetype"),
+                url("../assets/vendor/ionicons/fonts/ionicons.woff?v=2.0.0") format("woff"),
+                url("../assets/vendor/ionicons/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+
+        .chapter-secton-block .chapter {
+            text-align: left !important;
+            padding: 0rem 1rem;
+        }
+
+        .chapter-secton-block .chapter i {
+            padding-right: .5rem;
+        }
+
+        .book-container {
+            background-color: rgb(255 255 255 /10%);
+            border-radius: 10px;
+            box-shadow: 1px 1px 4px #00000063;
+            border-top: 1px solid rgb(255 255 255 / 30%);
+            border-left: 1px solid rgb(255 255 255 / 30%);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .book-container h5 {
+            text-shadow: 2px 2px 3px rgb(0 0 0 / 61%);
+        }
+
+        .book-container h6 {
+            font-weight: 100;
+        }
+
+        .book-container:hover {
+            background: rgb(255 255 255 / 30%);
+            box-shadow: inset -1px -1px 4px 0px;
+            transform: scale(1.03);
+            transition: 1s ease;
+        }
+
+        .booklist-container .title h1 {
+            font-weight: 100;
+        }
+
+        .booklist-container .title h1 span {
+            border-bottom: 2px solid rgb(255 255 255/50%);
+        }
+
+        .direct-action {
+            position: absolute;
+            right: 35px;
+            display: flex;
+            flex-flow: column;
+            top: 0;
+            bottom: 0;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 20px;
+            border-left: 2px solid rgb(255 255 255 / 50%);
+        }
+
+        .action {
+            padding: 5px 17px;
+            position: absolute;
+            left: 0;
+            right: 0;
+
+        }
+
+        .action.edit {
+            border-bottom: 2px solid rgb(255 255 255 / 50%);
+            top: 0;
+            bottom: 50%;
+
+
+            border-top-right-radius: 10px;
+        }
+
+        .action.delete {
+            top: 50%;
+            bottom: 0;
+            border-bottom-right-radius: 10px;
+        }
+
+        .action:hover {
+            background-color: white;
+            color: rgb(86, 6, 214);
+        }
+
+        .action:hover.edit {
+            border-bottom: none;
+        }
+
+        .action i {
+            transform: translate(-7px, 3px);
+        }
+
+        .left-sidebar ol ul {
+            padding-left: 25px !important;
+            padding: 1rem;
+        }
+
+        /* .left-sideber ol ul li i {
+            
+        } */
+        .sidebar-background ol ul li i {
+            padding-right: 0.5rem;
+        }
+
+        .left-sidebar ol ul li {
+            padding-bottom: 0.6rem;
+        }
+
+        .sidebar-background ol ul li i {
+            padding-right: 0.5rem;
+        }
+
+        .left-sidebar ol ul li:last-child {
+            padding-bottom: 0rem;
+        }
+
+        .search #searchBook {
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.356);
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            color: white;
+
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        /* .search button {
+            border-radius: 0px 20px 20px 0px;
+        } */
+
+        .form-control::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            font-weight: 500;
+            font-size: 15px;
+            opacity: .6;
+        }
+
+        .form-control::-moz-placeholder {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            font-weight: 500;
+            font-size: 15px;
+            opacity: .6;
+        }
+
+        .form-control:-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.85);
+
+            font-weight: 500;
+            font-size: 15px;
+            opacity: .6;
+        }
+
+        .form-control::-ms-input-placeholder {
+            color: rgba(255, 255, 255, 0.85);
+
+            font-weight: 500;
+            font-size: 15px;
+            opacity: .6;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.85);
+
+            font-weight: 500;
+            font-size: 15px;
+            opacity: .6;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-group input,
+        .form-group textarea{
+            background-color: rgb(255 255 255 /10%);
+            color: white;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea,
+        .btn {
+            border-radius: 25px;
+        }
+
+        .form-group label{
+            font-weight: 500;
+        }
+
+        .save-book-container {
+            padding: 1.5rem 2rem;
+            background-color: rgb(255 255 255 / 4%);
+            border-radius: 0px 0px 10px 10px;
+        }
+
+        header.lead{
+            padding: .5rem 1rem;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(255 255 255 / 15%);
+        }
+
+        header.lead span{
+            color: rgba(255 255 255/ 85%);
+            font-weight: 400;
+        }
+
+        .book-form-wraper {
+            box-shadow: 2px 2px 4px rgb(0 0 0 / 20%);
+            border-top: 1px solid rgb(255 255 255 / 50%);
+            border-left: 1px solid rgb(255 255 255 / 50%);
+            border-radius: 10px;
+        }
+        .general-error.show{
+            color: #8f000e;
+            opacity: 1;
+            font-size: .7rem;
+            font-weight: bold;
+            transition: .5s ease-out;
+        }
+
+        .form-control.is-invalid{
+            color: #8f000e !important;
+        }
+
+        .form-group .btn{
+            font-weight: bold;
+        }
+
+        .form-group .btn i{
+            font-size: 20px;
+            padding-left: 10px;
+        }
+    </style>
+    <div class="background-appearence">
+        <div class="app">
+            <div class="container-fluid main booklist-container" data-name="book-list">
+
+                <div class="row">
+                    <div class="col-3 sidebar-background p-0">
+                        <section name="side-nevigation" class=" p-3 left-sidebar">
+
+                            <h6 class="mb-3 p-2 book-name">Vocab Manage Nevigation</h6>
+
+                            <ol class="ml-4 mb-0 list-unstyled chapter-holder">
+                                <div class="chapter-secton-block">
+                                    <li class="chapter active-chapter" data-chapter-id="1">
+                                        <i class="ion-ios-folder"></i>
+                                        <span class="chapte-text">VocabCollections</span>
+                                    </li>
+                                    <ul class="section-holder active-sec-under-chapter" data-chapter-id="2">
+                                        <li class="section" section-id="1">
+
+                                            <span class="section-name" data-section-eng-name="Family members">
+                                                <i class="ion-social-buffer-outline"></i>
+                                                All books
+                                            </span>
+                                        </li>
+
+                                        <li class="section active-section" section-id="2">
+
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                <i class="ion-plus-round"></i>
+                                                Add Book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="2">
+                                            <i class="ion-paintbrush"></i>
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                Edit Book
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chapter-secton-block">
+                                    <li class="chapter" data-chapter-id="2">
+                                        <i class="ion-ios-bookmarks-outline"></i>
+                                        <span class="chapte-text">Chapter</span>
+                                    </li>
+                                    <ul class="section-holder" data-chapter-id="2">
+                                        <li class="section" section-id="1">
+                                            <i class="ion-social-buffer-outline"></i>
+                                            <span class="section-name" data-section-eng-name="Family members">
+                                                All chapter of a book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="2">
+                                            <i class="ion-plus-round"></i>
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                Add chapter of a Book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="2">
+                                            <i class="ion-paintbrush"></i>
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                Edit chapter of a Book
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chapter-secton-block">
+                                    <li class="chapter" data-chapter-id="3">
+                                        <i class="ion-ios-list-outline"></i>
+                                        <span class="chapte-text">Section</span>
+                                    </li>
+                                    <ul class="section-holder" data-chapter-id="3">
+                                        <li class="section" section-id="1">
+                                            <span class="section-name" data-section-eng-name="Family members">
+                                                All section of a book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="2">
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                Add section of a Book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="2">
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                Edit section of a Book
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chapter-secton-block">
+                                    <li class="chapter" data-chapter-id="4">
+                                        <i class="ion-ios-keypad"></i>
+                                        <span class="chapte-text">Vocab</span>
+                                    </li>
+                                    <ul class="section-holder" data-chapter-id="1">
+                                        <li class="section" section-id="1">
+                                            <span class="section-name" data-section-eng-name="Family members">
+                                                All vocabs of a book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="2">
+                                            <span class="section-name" data-section-eng-name="Around the house">
+                                                Add vocab of a Book
+                                            </span>
+                                        </li>
+
+                                        <li class="section" section-id="3">
+                                            <span class="section-name" data-section-eng-name="Animals">
+                                                Edit vocab of a Book
+                                            </span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </ol>
+                        </section>
+                    </div>
+                    <div class="px-5 pt-4 pb-2 col-9 content-pannel">
+
+                        <div class="row justify-content-center">
+
+                            <section class="col-8 p-0 book-form-wraper">
+                                <header class="lead text-center title">
+                                    <span>Available vocabulary books to Change or delete</span>
+                                </header>
+                                <div class="save-book-container">
+                                    <div class="form-group">
+                                        <label for="" class="form-input-label">Book Name</label>
+                                        <span class="general-error show"> A name is required</span>
+                                        <input type="text" class="form-control is-invalid" placeholder="Book name" id="book-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="form-input-label">Author Name</label>
+                                        <span class="general-error show"> A name is required</span>
+                                        <input type="text" class="form-control" placeholder="Author name" id="author-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="form-input-label">Description</label>
+                                        <!-- <input type="text" class="form-control" placeholder="Description name" id="description"> -->
+                                        <textarea class="form-control" name="description" id="description" placeholder="Description name"  rows="5"></textarea>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-success w-50 mt-2">
+                                            Save
+                                            <i class="ion-android-create"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../scripts/script.js"></script>
+
+</body>
+
+</html>

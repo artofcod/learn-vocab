@@ -1,0 +1,188 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vocab-practice</title>
+
+        <link rel="stylesheet" href="../assets/styles/style.css">
+        <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+        <link rel="stylesheet" href="finalStyle.css">
+        <link rel="stylesheet" href="../assets/vendor/ionicons/css/ionicons.min.css">
+    </head>
+
+    <body>
+        <div class="background-appearence">
+            <div class="app">
+                <header id="header-nav">
+                    <nav class="nav nav-fill">
+                        <a class="nav-item nav-link" data-path="/" href="#">Home</a>
+                        <a class="nav-item nav-link" data-path="/practice-v" href="#">Practice vocab</a>
+                        <a class="nav-item nav-link active-nav-link" data-path="/manage-v" href="#">Manage vocab</a>
+                        <a class="nav-item nav-link" data-path="/settings" href="#">Settings</a>
+                    </nav>
+                </header>
+                <main name="content-area" class="content-area">
+                    <div class="container-fluid main manage-container" data-name="manage-v">
+                        <div class="row">
+                            <div name="side-nevigation" class="col-3 p-3" id="left-sidebar">
+
+                                <h6 class="mb-3 p-2">Nevigation Title</h6>
+
+                                <ol class="ml-4 mb-0 list-unstyled accordian">
+
+                                    <!-- end accoredian dropdown -->
+                                    <div class="accordian-dropdown">
+                                        <li class="acc-toggle active-acc-toggle" data-id="book"><span>book</span></li>
+                                        <ul class="acc-body active-acc-body" data-id="book">
+                                            <li class="acc-item manage-acc-item active-acc-item" data-item-id="1"
+                                                data-path="/manage-v/books/all">
+                                                <i class="ion-social-buffer-outline"></i>
+                                                <span class="nav-name">
+                                                    All
+                                                </span>
+                                            </li>
+
+                                            <li class="acc-item manage-acc-item" data-item-id="2"
+                                                data-path="/manage-v/books/create">
+                                                <i class="ion-plus-round"></i>
+                                                <span class="nav-name">
+                                                    create
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordian-dropdown">
+                                        <li class="acc-toggle" data-id="chpater"><span>chpater</span></li>
+                                        <ul class="acc-body" data-id="chpater">
+                                            <li class="acc-item manage-acc-item" data-item-id="3"
+                                                data-path="/manage-v/chapter/all">
+                                                <i class="ion-social-buffer-outline"></i>
+                                                <span class="nav-name">
+                                                    All
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordian-dropdown">
+                                        <li class="acc-toggle" data-id="section"><span>section</span></li>
+                                        <ul class="acc-body" data-id="section">
+                                            <li class="acc-item manage-acc-item" data-item-id="4"
+                                                data-path="/manage-v/section/all">
+                                                <i class="ion-social-buffer-outline"></i>
+                                                <span class="nav-name">
+                                                    All
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="accordian-dropdown">
+                                        <li class="acc-toggle" data-id="vocabulary"><span>vocabulary</span></li>
+                                        <ul class="acc-body" data-id="vocabulary">
+                                            <li class="acc-item manage-acc-item" data-item-id="5"
+                                                data-path="/manage-v/vocab/all">
+                                                <i class="ion-social-buffer-outline"></i>
+                                                <span class="nav-name">
+                                                    All
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </ol>
+
+                            </div>
+                            <!-- #left-sidbar end -->
+                            <div class="px-5 pt-4 pb-2 col-9 manage-pannel  manage" id="content-pannel">
+                                <div class="book">
+                                    <div class="lead text-center titel">
+                                        <h1 class="pb-4">
+                                            <span>Available vocabulary books to Change or delete</span>
+                                        </h1>
+                                        <div class="search pb-4 w-75 mx-auto">
+                                            <div class="form-group has-success">
+                                                <lable class="form-control-label sr-only">search</lable>
+                                                <input type="text" class="form-control" id="searchBook"
+                                                    placeholder="search for...">
+                                            </div>
+                                        </div>
+                                        <!-- .search end -->
+                                    </div>
+                                    <!-- .lead end -->
+                                    <div class="row justify-content-center books-wraper">
+                                        <div class="col-4  pb-4 book-handel">
+                                            <div class="book-container">
+                                                <div class="row">
+                                                    <div class=" col-9 pr-0 main-content">
+
+                                                        <div class="py-4 pl-3" data-id="1">
+                                                            <h5>Practice Makes Perfect Basic Spanish</h5>
+                                                            <h6>Dorothy Richmond</h6>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- .main - content end-->
+
+                                                    <div class=" col-3 pl-0 action-content">
+                                                        <div class="action-wraper">
+                                                            <div class="edit" data-id="1">
+                                                                <i class="ion-android-create"></i>
+                                                            </div>
+                                                            <div class="seperator"></div>
+                                                            <div class="delete" data-id1="">
+                                                                <i class="ion-android-delete"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- .action - content end-->
+
+                                                </div>
+                                                <!--row end-->
+
+                                            </div>
+                                            <!-- .book - container end-->
+                                        </div>
+                                        <!-- .col - 3 end-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer></footer>
+            </div>
+            <div class="injection">
+                <div class="overlay" id="simpleModal">
+                    <div class="wraper d-flex justify-content-center">
+                        <div class="card p-4 show">
+                            <div class="icon-wrap close-btn">
+                                <i class="ion-close-round"></i>
+                            </div>
+                            <div class="card-body text-center">
+                                <div class="message">
+
+                                    <img src="../assets/img/undraw_empty.svg" alt="" srcset=""
+                                        class="img-fluid fix-height px-5 mx-5 p-3">
+                                    <h6 class="mb-4 text-left">
+                                        <p class="text-center">No vocabs are found for practice!</p>
+
+                                    </h6>
+                                    <h3 class="mb-4 d-none">Did you really practiced?</h3>
+
+                                </div>
+
+                                <div class="modal-action">
+                                    <button class="w-50 btn btn-info yes">Add vocabs <i
+                                            class="ion-plus-round"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

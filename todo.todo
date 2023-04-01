@@ -1,0 +1,34 @@
+todo list
+---------
+
+o) delete book
+o) after add book show which operation to do next.
+    -wnat to add chapter > section > vocab step by setp.
+    -wnat to add vocab directly
+    -wnat to add defaut chapter section or not 
+o) when click book on book list of book section show dilog what to do next
+    -go to chapter
+    -go to vocab
+    -go to section
+
+o) when clik on a book in practice area. if there was no vocab present on 
+    that perticular book, show dialog that no vocab present under that book
+    hence book cant be practice. 
+    show message to add voabulary.
+    also dont redirect ot practice area.
+
+o) show no data found if no search reasult is found.
+
+o) show no book is found if there is no books present in system. 
+    and show encouragement message to add a book.
+    in mange and practice area.
+
+o) add search functionality for books in book list section.
+
+o) add search functionality in modal.
+
+
+
+
+compleated
+----------

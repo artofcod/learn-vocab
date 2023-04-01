@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
+    <style>
+        .camera {
+            width: 1200px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .frame {
+            width: 6000px;
+            /* transition: .5s ease; */
+        }
+
+        .item {
+            width: 1196px;
+            height: 100vh;
+            display: inline-block;
+            padding: 4%;
+        }
+
+        .item h1 {
+            padding: 10%;
+            background: rgb(255 255 255 / 25%);
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        .a {
+            background-color: black;
+        }
+
+        .b {
+            background-color: yellowgreen;
+        }
+
+        .c {
+            background-color: tomato;
+        }
+
+        .d {
+            background-color: cadetblue;
+        }
+
+        .e {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="left">&lt;</button>
+    <button class="right">></button>
+    <div class="camera">
+        <div class="frame">
+            <div class="item a">
+                <h1>item 1</h1>
+            </div>
+            <div class="item b">
+                <h1>item 2</h1>
+            </div>
+            <div class="item c">
+                <h1>item 3</h1>
+            </div>
+            <div class="item d">
+                <h1>item 4</h1>
+            </div>
+            <div class="item e">
+                <h1>item 5</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        const slide = (() => {
+            let item;
+            let currentItem = 1;
+            let frame = document.querySelector('.frame');
+            let allItems = document.querySelectorAll('.item');
+            let position = 0
+
+            // let lastNodeCopy = allItems[allItems.length-1].cloneNode();
+            // console.log(lastNodeCopy);
+            // frame.append(lastNodeCopy);
+            document.querySelector('.right').addEventListener('click', () => {
+                console.log(currentItem ,'<=', allItems.length - 1)
+                // if (currentItem < allItems.length ) {
+
+                //     //frame.setAttribute('style', 'transition:.5s ease');
+                //     frame.setAttribute('style', 'transform:translatex(-' + 1200 * currentItem + 'px)')
+                //     currentItem++;
+                // }
+                // else {
+                //     currentItem = 0;
+                //     //frame.setAttribute('style', 'transition:unset');
+                // }
+
+                if(position == 6000){
+                    position = 0
+                    currentItem = 0;
+                }
+                nextpostition = 1200 * currentItem;
+                frame.setAttribute('style', 'transform:translatex(-' + nextpostition + 'px)')
+                    currentItem++;
+                    position = nextpostition;
+
+            }, false);
+
+            document.querySelector('.left').addEventListener('click', () => {
+                if (currentItem >= 0) {
+                    frame.setAttribute('style', 'transition:.5s ease');
+                    frame.setAttribute('style', 'transform:translatex(-' + 1200 * currentItem + 'px)')
+                    currentItem--;
+                }
+
+                else {
+                    currentItem = allItems.length;
+                    frame.setAttribute('style', 'transition:unset');
+                }
+            }, false)
+        })();
+    </script>
+</body>
+
+</html>
