@@ -309,18 +309,19 @@ const VocabTable = (() => {
     const setupSaveBtnClick = (btnId) => {
         query(`#btn${btnId}`).addEventListener('click', async (e) => {
             if (await validateAndSaveInputBoxData(e)) {
-                setupEditBtnClick(dataId);
-                setupDeleteBtnClick(dataId);
+                setupEditBtnClick(btnId);
+                setupDeleteBtnClick(btnId);
             }
         }, false)
     }
 
     const setupCancelBtnClick = (dataId) => {
 
+
         query(`#btnCancel${dataId}`).addEventListener('click', async (e) => {
-            let trDataset = (heigherO.getProperPath(e => e))(e)[5].dataset;
+            let trDataset = (heigherO.getProperPath(e => e))(e)[3].dataset;
             if (validate.textIsBlank(trDataset.vocabId)) {
-                let obj = manageState.chapter.getChapter(trDataset.vocabId);
+                let obj = manageState.vocab.getVocab(trDataset.vocabId);
                 replaceInputBoxInData(obj, trDataset.index);
                 setupEditBtnClick(dataId);
                 setupDeleteBtnClick(dataId);
