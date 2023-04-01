@@ -348,8 +348,8 @@ const SectionTable = (() => {
     const setupSaveBtnClick = (btnId) => {
         query(`#btn${btnId}`).addEventListener('click', async (e) => {
             if (await validateAndSaveInputBoxData(e)) {
-                setupEditBtnClick(dataId);
-                setupDeleteBtnClick(dataId);
+                setupEditBtnClick(btnId);
+                setupDeleteBtnClick(btnId);
             }
 
         }, false)
