@@ -87,7 +87,6 @@ const SectionTable = (() => {
 
 
     const inputBoxFrm = (obj, key) => {
-        console.log(obj);
         return (`
                 <tr
                 id="id${key}"
