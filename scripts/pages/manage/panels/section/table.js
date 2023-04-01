@@ -358,11 +358,6 @@ const SectionTable = (() => {
     const setupCancelBtnClick = (dataId) => {
         query(`#btnCancel${dataId}`).addEventListener('click', async (e) => {
             let trDataset = (heigherO.getProperPath(e => e))(e)[5].dataset;
-            // let obj = manageState.section.getSection(trDataset.sectionId);
-            // replaceInputBoxInData(obj, trDataset.index);
-            // setupEditBtnClick(dataId);
-            // setupDeleteBtnClick(dataId);
-
             if (validate.textIsBlank(trDataset.sectionId)) {
                 let obj = manageState.section.getSection(trDataset.sectionId);
                 replaceInputBoxInData(obj, trDataset.index);
