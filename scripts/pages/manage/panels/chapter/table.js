@@ -8,152 +8,57 @@ const ChpaterTable = (() => {
 
     //private scope
     const frm = () => {
-        return Object.freeze(`
-                <table class="table table-hover table-striped text-light">
-                    <thead>
-                        <tr>
-                        <th>Sl.no</th>
-                        <th>chapter name normal</th>
-                        <th>chapter name english</th>
-                        <th>description</th>
-                        ${isAction ? `<th>action</th>` : ''}
-                    </tr>
-                    </thead>
-                    <tbody>
-                       
-                    </tbody>
-                    <!-- end of tbody -->
-                </table>
-                <!-- end of table -->
-            `)
+        return commonFrm().table(
+            {
+                slno: 'Sl.no',
+                name: 'chapter name normal',
+                engName: 'chapter name english',
+                description: 'description',
+                isAction: isAction
+            }
+        )
     }
 
     const emptyDataFrm = () => {
-        let context = query('#content-pannel').children[0].className;
-        return (`<div class="row text-center my-3">
-                    <div class="col my-5 py-4">
-                        <img src="assets/img/undraw_no_data_qbuo.svg" alt="" srcset=""
-                            class="img-fluid">
-                        <p class="mt-1">
-                            <span class="main-message">
-                                No Chapters are found !
-                            </span>
-                            <span class="sub-message">
-                                Under book
-                                <span class="name-indicatior">${manageState.book.getBook(bookId).b_name}</span>
-                            </span>
-                            <span class="nodata-action ${context !== 'chapter' ? 'd-none' : ''}">
-                                <button class="btn px-4 mt-4">
-                                    <span>Add Chapter</span>
-                                    <i class="ion-plus-round"></i>
-                                </button>
-                            </span>
-                        </p>
-                    </div>
-                    <!-- end of .col -->
-                </div>`)
+        return commonFrm().noData(
+            {
+                context: 'chapter',
+                mainMessage: "No Chpaters are found !",
+                subMessage: "Under book",
+                subMessageIdicator: manageState.book.getBook(bookId).b_name
+            }
+        );
     }
 
     const dataFrm = (obj, key) => {
-        const actionFrm = `<td>
-                                <div class="nice-icon edit mr-2">
-                                    <i class="ion-edit"></i>
-                                </div>
-                                <div class="nice-icon delete">
-                                    <i class="ion-android-delete"></i>
-                                </div>
-                            </td>`;
-        return Object.freeze(`
-                    <tr
-                    ${!isAction ? 'class="active-hover"' : ''}
-                    id="id${key}"
-                    data-index="${key}"
-                    data-chapter-id="${!!obj ? String(obj.chapter_id) : ''}">
-                        <td>${key}</td>
-                        <td>${obj.c_name}</td>
-                        <td>${obj.c_name_eng}</td>
-                        <td>${obj.c_description}</td>
-                        ${isAction ? actionFrm : ''}    
-                    </tr>
-                    <!-- end of tr -->
-                `);
+        return commonFrm().data(
+            {
+                context: 'chapter',
+                key: key,
+                id: !!obj ? String(obj.chapter_id) : '',
+                name: obj.c_name,
+                engName: obj.c_name_eng,
+                description: obj.c_description,
+                isAction: isAction
+            }
+        )
     }
 
     const inputBoxFrm = (obj, key) => {
+        let x = {
 
-        let chpaterSectionIputes = `
-                <tr 
-                id="id${key}"
-                data-index="${key}"
-                data-chapter-id="${!!obj ? String(obj.chapter_id) : ''}">
+        }
 
-                    <td>${key}</td>
-                    <td colspan=4>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-group chapter-name${key} mb-4">
-                                    <label for="" class="form-input-label sr-only">chapter
-                                        name</label>
-                                    <div class="">
-                                        <input type="text"
-                                            class="form-control form-control-sm"
-                                            placeholder="Chapter Name"
-                                            id="chapter-name-${key}" 
-                                            value="${!!obj ? obj.c_name : ''}">
-                                    </div>
-                                    <span class=" col-12 general-error d-none"> A name is
-                                        required</span>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group chapter-eng-name${key} mb-4">
-                                    <label for="" class="form-input-label sr-only">chapter
-                                         English Name</label>
-                                    <div class="">
-                                        <input type="text"
-                                            class="form-control form-control-sm"
-                                            placeholder="Chapter English Name"
-                                            id="chapter-eng-name-${key}" 
-                                            value="${!!obj ? obj.c_name_eng : ''}">
-                                    </div>
-                                    <span class=" col-12 general-error d-none"> A name is
-                                        required</span>
-                                </div>
-                            </div>
-                            <div class="col-9">
-                                <div class="form-group chapter-description${key} mb-1">
-                                    <label for=""
-                                        class="form-input-label text-right sr-only">Chapter Description</label>
-                                    <textarea class="form-control form-control-sm"
-                                        name="description"
-                                        id="chapter-description-${key}"
-                                        placeholder="Chapter Description"
-                                        rows="2">${!!obj ? obj.c_description : ''}</textarea>
-                                </div>
-                            </div>
-                            <div class="col-3">
-                                <div class="form-group text-center mx-auto">
-                                    <button
-                                    class="btn btn-success save py-1"
-                                    id="btn${key}"
-                                    >
-                                        <i class="ion-checkmark-round p-0"></i>
-                                    </button>
+        return commonFrm().input({
+            context: 'chapter',
+            key: key,
+            id: !!obj ? String(obj.chapter_id) : '',
+            name: !!obj ? obj.c_name : '',
+            engName: !!obj ? obj.c_name_eng : '',
+            description: !!obj ? obj.c_description : ''
+        })
 
-                                    <button
-                                    class="btn btn-danger cancel   py-1"
-                                    id="btnCancel${key}"
-                                    >
-                                        <i class="ion-close-round p-0"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            `;
 
-        return Object.freeze(chpaterSectionIputes);
     }
 
     const EDIT_BTN_CLASS = 'table .edit';
@@ -489,6 +394,8 @@ const ChpaterTable = (() => {
                 query(TABLE_BODY_EL).innerHTML = inputBoxFrm(undefined, 1);
                 query(pannelLayout + ' ~ .add-input-box').classList.remove('d-none');
                 setupSaveBtnClick(1);
+                setupCancelBtnClick(1);
+                setupAddInptboxClick();
             }, false)
         }
     }
@@ -514,10 +421,8 @@ const ChpaterTable = (() => {
         if (ADD_INPUT_BOX_BTN_EL) {
             ADD_INPUT_BOX_BTN_EL.addEventListener('click', (e) => {
 
-                let lastIndex = query(TABLE_BODY_EL)
-                    .lastElementChild.dataset.index;
-
-                let newIndex = ++lastIndex;
+                let lastIndex = query(TABLE_BODY_EL).lastElementChild;
+                let newIndex = lastIndex ? ++lastIndex.dataset.index : 1;
 
                 injectNewRowWithInputbox(newIndex);
                 scrollWhereRowWithInputboxInjected();
