@@ -472,6 +472,8 @@ const SectionTable = (() => {
                 query(TABLE_BODY_EL).innerHTML = inputBoxFrm(undefined, 1);
                 query(pannelLayout + ' ~ .add-input-box').classList.remove('d-none');
                 setupSaveBtnClick(1);
+                setupCancelBtnClick(1);
+                setupAddInptboxClick();
             }, false)
         }
     }
@@ -496,10 +498,8 @@ const SectionTable = (() => {
         if (ADD_INPUT_BOX_BTN_EL) {
             ADD_INPUT_BOX_BTN_EL.addEventListener('click', (e) => {
 
-                let lastIndex = query(TABLE_BODY_EL)
-                    .lastElementChild.dataset.index;
-
-                let newIndex = ++lastIndex;
+                let lastIndex = query(TABLE_BODY_EL).lastElementChild;
+                let newIndex = lastIndex ? ++lastIndex.dataset.index : 1;
 
                 injectNewRowWithInputbox(newIndex);
                 scrollWhereRowWithInputboxInjected();
