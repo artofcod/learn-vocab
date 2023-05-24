@@ -209,7 +209,6 @@ const HeaderInfo = (() => {
                 break;
 
             case 'book':
-                console.log(qeue, isFinal);
                 Object.assign(innerPram, {
                     selectionQeue: qeue,
                     selected: {
@@ -223,7 +222,6 @@ const HeaderInfo = (() => {
                     innerPram)
 
             case 'chapter':
-                console.info(qeue, isFinal);
                 Object.assign(innerPram, {
                     selectionQeue: qeue,
                     selected: {
